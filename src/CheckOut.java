@@ -7,17 +7,18 @@ public class CheckOut
         Scanner in = new Scanner(System.in);
         double itemPrice = 0;
         double total = 0;
-        boolean done = false;
+        boolean finish = true;
 
-        do {
-            itemPrice = SafeInput.getRangedDouble(in, "Enter price of an item: ", 0.50, 9.99);
-            total += itemPrice;
-            boolean another = SafeInput.getYNConfirm(in,"Do you have another item?");
-            if(another = false)
-                done = true;
+            do {
+                itemPrice = SafeInput.getRangedDouble(in, "Enter price of an item: ", 0.50, 9.99);
+                total += itemPrice;
+
+                finish = SafeInput.getYNConfirm(in, "Do you have another item?");
+            }while(finish);
+
+        System.out.printf("Your total cost for the items is $" + total);
 
 
-        }while (!done);
 
 
 

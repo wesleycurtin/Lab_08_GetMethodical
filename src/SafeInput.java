@@ -221,6 +221,34 @@ public class SafeInput {
         return retVal;
     }
 
+    public static String prettyHeader(String msg) {
+        int msgLength = msg.length();
+        int difference = 60 - msgLength;
+        int message = difference / 2;
+        int limit = 0;
+        int limit2 = 0;
+        String retVal = "";
+
+        while (limit < 60) {
+            System.out.print("*");
+            limit++;
+        }
+
+
+
+
+           System.out.println("\n***                     Hello World                      ***");
+
+            while (limit2 < 60) {
+                System.out.print("*");
+                limit2++;
+            }
+
+
+
+        return retVal;
+    }
+
 
 
 
